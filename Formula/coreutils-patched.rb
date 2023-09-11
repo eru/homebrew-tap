@@ -18,13 +18,6 @@ class CoreutilsPatched < Formula
     depends_on "xz" => :build
   end
 
-  #region CUSTOM - https://github.com/jarun/advcpmv
-  patch do
-    url "https://raw.githubusercontent.com/jarun/advcpmv/master/advcpmv-0.9-9.4.patch"
-    sha256 "b05ab0a352dc4eb839c4adb2befe2de8f6f1bc69bf2a5eec1a4f4f2d369e12b3"
-  end
-  #endregion
-
   depends_on "gmp"
   uses_from_macos "gperf" => :build
 
@@ -42,6 +35,13 @@ class CoreutilsPatched < Formula
   conflicts_with "gfold", because: "both install `gfold` binaries"
   conflicts_with "idutils", because: "both install `gid` and `gid.1`"
   conflicts_with "md5sha1sum", because: "both install `md5sum` and `sha1sum` binaries"
+
+  # #region CUSTOM - https://github.com/jarun/advcpmv
+  patch do
+    url "https://raw.githubusercontent.com/jarun/advcpmv/2961dc3ec81dfaa3d00091edfcf8a7559ca67bfb/advcpmv-0.9-9.4.patch"
+    sha256 "b05ab0a352dc4eb839c4adb2befe2de8f6f1bc69bf2a5eec1a4f4f2d369e12b3"
+  end
+  # #endregion
 
   # https://github.com/Homebrew/homebrew-core/pull/36494
   def breaks_macos_users
