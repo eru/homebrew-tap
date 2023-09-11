@@ -1,8 +1,8 @@
 class Xrdp < Formula
   desc "Open source RDP server"
   homepage "http://www.xrdp.org/"
-  url "https://github.com/neutrinolabs/xrdp/releases/download/v0.9.19/xrdp-0.9.19.tar.gz"
-  sha256 "94017d30e475c6d7a24f651e16791551862ae46f82d8de62385e63393f5f93d0"
+  url "https://github.com/neutrinolabs/xrdp/releases/download/v0.9.23/xrdp-0.9.23.tar.gz"
+  sha256 "418a2bc1523b762fb94d2f809573f6c97de7b284899f95ee9583aff770098ba3"
   license "Apache-2.0"
   head "https://github.com/neutrinolabs/xrdp.git"
 
