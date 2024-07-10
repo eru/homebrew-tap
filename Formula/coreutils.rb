@@ -1,9 +1,9 @@
 class Coreutils < Formula
   desc "GNU File, Shell, and Text utilities"
-  homepage "https://www.gnu.org/software/coreutils"
-  url "https://ftp.gnu.org/gnu/coreutils/coreutils-9.4.tar.xz"
-  mirror "https://ftpmirror.gnu.org/coreutils/coreutils-9.4.tar.xz"
-  sha256 "ea613a4cf44612326e917201bbbcdfbd301de21ffc3b59b6e5c07e040b275e52"
+  homepage "https://www.gnu.org/software/coreutils/"
+  url "https://ftp.gnu.org/gnu/coreutils/coreutils-9.5.tar.xz"
+  mirror "https://ftpmirror.gnu.org/coreutils/coreutils-9.5.tar.xz"
+  sha256 "cd328edeac92f6a665de9f323c93b712af1858bc2e0d88f3f7100469470a1b8a"
   license "GPL-3.0-or-later"
 
   head do
@@ -38,8 +38,8 @@ class Coreutils < Formula
 
   # #region CUSTOM - https://github.com/jarun/advcpmv
   patch do
-    url "https://raw.githubusercontent.com/jarun/advcpmv/2961dc3ec81dfaa3d00091edfcf8a7559ca67bfb/advcpmv-0.9-9.4.patch"
-    sha256 "b05ab0a352dc4eb839c4adb2befe2de8f6f1bc69bf2a5eec1a4f4f2d369e12b3"
+    url "https://raw.githubusercontent.com/jarun/advcpmv/1e2b1c6b74fa0974896bf94604279a3f74b37a63/advcpmv-0.9-9.5.patch"
+    sha256 "2d17dbe2179994050a89797f842fc7828a9e18cc42b7caee058654adbcd21fe6"
   end
   # #endregion
 
@@ -54,7 +54,7 @@ class Coreutils < Formula
     args = %W[
       --prefix=#{prefix}
       --program-prefix=g
-      --with-gmp
+      --with-libgmp
       --without-selinux
     ]
 
